@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase Bloqueada</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>🔒 Acceso Restringido</h2>
+    <p style="font-size: 1.1em; margin: 30px 0;">
+        {{ mensaje }}
+    </p>
+    
+    <p style="opacity: 0.7;">
+        Algunas cosas buenas requieren esperar... 💕
+    </p>
+
+    <a href="/" style="margin-top: 30px;">← Volver al inicio</a>
+</div>
+</body>
+</html>

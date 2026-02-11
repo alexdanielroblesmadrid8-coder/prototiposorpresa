@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 3 - El Futuro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>✨ Fase 3 – Lo Que Viene</h2>
+    <p>
+        Algunos procesos aún están ejecutándose...<br>
+        Pero ya sabemos hacia dónde van.
+    </p>
+    
+    <p style="font-size: 1.2em; margin: 25px 0;">
+        ❓ <strong>¿Qué es lo que más esperas de nosotros?</strong>
+    </p>
+    
+    <p style="font-size: 0.9em; opacity: 0.7;">
+        💡 Pista: No es sobre mañana... es sobre todos los días que vienen.
+    </p>
+
+    <form method="post">
+        <input name="respuesta" placeholder="Tu respuesta más sincera..." required autocomplete="off">
+        <button type="submit">Finalizar</button>
+    </form>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <a href="/" style="margin-top: 20px; font-size: 0.9em;">← Volver al inicio</a>
+</div>
+</body>
+</html>

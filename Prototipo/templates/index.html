@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Sistema Especial 💕</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Bienvenida a Nuestro Sistema 💕</h1>
+    
+    <p>Este es un pequeño programa creado especialmente para ti...</p>
+
+    <p><strong>Estado del Sistema:</strong></p>
+    <ul>
+        <li>📌 Fase 1: {{ "✅ Disponible" if fase1_ok else "🔒 Bloqueada" }} 
+            {% if progreso.fase1 %}<span style="color: #90EE90;">- Completada ✓</span>{% endif %}
+        </li>
+        <li>📌 Fase 2: {{ "✅ Disponible" if fase2_ok else "🔒 Bloqueada" }}
+            {% if progreso.fase2 %}<span style="color: #90EE90;">- Completada ✓</span>{% endif %}
+        </li>
+        <li>📌 Fase 3: {{ "✅ Disponible" if fase3_ok else "🔒 Bloqueada" }}
+            {% if progreso.fase3 %}<span style="color: #90EE90;">- Completada ✓</span>{% endif %}
+        </li>
+    </ul>
+
+    <div style="margin-top: 30px;">
+        <a href="/fase1">🚀 Iniciar Fase 1</a>
+        <a href="/fase2">💫 Iniciar Fase 2</a>
+        <a href="/fase3">✨ Iniciar Fase 3</a>
+    </div>
+
+    <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.7;">
+        Cada fase desbloqueará nuevos recuerdos...
+    </p>
+</div>
+</body>
+</html>

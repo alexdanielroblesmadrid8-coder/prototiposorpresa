@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 1 - El Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>💝 Fase 1 – El Primer Encuentro</h2>
+    <p>
+        Todo gran programa comienza con una primera línea de código...<br>
+        Y nuestra historia comenzó en un lugar especial.
+    </p>
+    
+    <p style="font-size: 1.2em; margin: 25px 0;">
+        ❓ <strong>¿Dónde fue nuestra primera cita?</strong>
+    </p>
+    
+    <p style="font-size: 0.9em; opacity: 0.7;">
+        💡 Pista: Tiene que ver con algo frio y mucha conversación...
+    </p>
+
+    <form method="post">
+        <input name="respuesta" placeholder="Escribe tu respuesta aquí..." required autocomplete="off">
+        <button type="submit">Enviar Respuesta</button>
+    </form>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <a href="/" style="margin-top: 20px; font-size: 0.9em;">← Volver al inicio</a>
+</div>
+</body>
+</html>
